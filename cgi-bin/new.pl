@@ -19,12 +19,21 @@ $dbh->disconnect;
 print $q->header('text/html');
 print<<BLOCK;
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Creacion de pagina</title>
-  <head>
-  <body>
-    <h1>Creado con exito</h1>
-  </body>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pagina Creada</title>
+</head>
+<body>
+    <header>
+        <h1>$title</h1>
+    </header>
+    <article>
+        <p>$text</p>
+        <hr>
+        <h1>Pagina grabada <a href="cgi-bin\list.pl">Listado de Paginas</a></h1>
+    </article>
+</body>
 </html>
 BLOCK
