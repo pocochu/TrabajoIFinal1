@@ -34,17 +34,16 @@ while(my  @row = $sth->fetchrow_array()){
     print<<BLOCK;
     <li>
       <a href="view.pl?title=@row">@row</a>
-      <form action="delete.pl?title=@row">
+      <form action="delete.pl?title=@row" style="display: inline-block">
         <input type="hidden" value="@row" name="title">
         <input type="submit" value="X">
       </form>
-      <form action="edit.pl?title=@row">
+      <form action="edit.pl?title=@row" style="display: inline-block">
         <input type="hidden" value="@row" name="title">
         <input type="submit" value="E">
       </form>
     </li>
 BLOCK
-    print "@row\n";
 }
 
 print<<BLOCK;

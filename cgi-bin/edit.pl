@@ -32,11 +32,11 @@ print<<BLOCK;
         <hr>
     </header>
     <section>
-        <form action="cgi-bin/new.pl">
+        <form action="new.pl">
             <label for="tilte">Titulo</label>
-            <input type="text" id="title" name="title" value="$titleB"><br>
+            <input type="text" id="title" name="title" value="$titleB" readonly><br>
             <label for="text">Texto</label>
-            <textarea name="text" id="text" cols="30" rows="10" placeholder="$textB"></textarea><br>
+            <textarea name="text" id="text" cols="30" rows="10" placeholder="Ingrese el contenido de su pagina" required>$textB</textarea><br>
             <input type="submit" value="Enviar">
         </form>
         <a href="../index.html">Cancelar</a>

@@ -28,7 +28,7 @@ print<<BLOCK;
     </header>
     <article>
         <hr>
-        <h1>Volver a la pagina de listado <a href="list.pl">Listado de Páginas</a></h1>
+        <h1>Volver a la pagina de listado <a href="list.pl">Listado de paginas</a></h1>
     </article>
 </body>
 </html>
