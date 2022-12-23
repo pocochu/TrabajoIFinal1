@@ -12,5 +12,27 @@ my $q = CGI->new;
 my $title = $q->param("title");
 my $sth = $dbh->prepare("DELETE FROM Wiki WHERE title=?;");
 $sth->execute($title);
+
+print $q->header('text/html');
+print<<BLOCK;
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pagina Eliminada</title>
+</head>
+<body>
+    <header>
+        <h1>Pagina eliminada con exito</h1>
+    </header>
+    <article>
+        <hr>
+        <h1>Volver a la pagina de listado <a href="list.pl">Listado de Páginas</a></h1>
+    </article>
+</body>
+</html>
+BLOCK
+
 $sth->finish;
 $dbh->disconnect;
