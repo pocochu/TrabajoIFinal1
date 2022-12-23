@@ -35,9 +35,11 @@ while(my  @row = $sth->fetchrow_array()){
     <li>
       @row
       <form action="delete.pl?title=@row">
+        <input type="hidden" value="@row" name="title">
         <input type="submit" value="X">
       </form>
       <form action="edit.pl?title=@row">
+        <input type="hidden" value="@row" name="title">
         <input type="submit" value="E">
       </form>
     </li>

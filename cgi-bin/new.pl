@@ -32,7 +32,7 @@ print<<BLOCK;
     <article>
         <p>$text</p>
         <hr>
-        <h1>Pagina grabada <a href="cgi-bin\list.pl">Listado de Paginas</a></h1>
+        <h1>Pagina grabada <a href="list.pl">Listado de Paginas</a></h1>
     </article>
 </body>
 </html>
