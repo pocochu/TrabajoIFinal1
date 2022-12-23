@@ -33,7 +33,7 @@ BLOCK
 while(my  @row = $sth->fetchrow_array()){
     print<<BLOCK;
     <li>
-      @row
+      <a href="view.pl?title=@row">@row</a>
       <form action="delete.pl?title=@row">
         <input type="hidden" value="@row" name="title">
         <input type="submit" value="X">
@@ -50,8 +50,8 @@ BLOCK
 print<<BLOCK;
         </ul>
         <hr>
-        <a href="new.html">Nueva Pagina</a><br>
-        <a href="index.html">Volver al Inicio</a>
+        <a href="../new.html">Nueva Pagina</a><br>
+        <a href="../index.html">Volver al Inicio</a>
     </article>
 </body>
 </html>
