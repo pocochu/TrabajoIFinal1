@@ -51,11 +51,16 @@ sub convertor {
 
     $markdown =~ s/^#####\s+(.*)$/<h5>$1<\/h5>/gm;
 
-    $markdown =~ s/\*\*(.+?)\*\*/<b>$1<\/b>/gm;
+    $markdown =~ s/\*\*(.+?)\*\*/<b>$1<\/b>/g;
 
-    $markdown =~ s/\*(.+?)\*/<i>$1<\/i>/gm;
+    $markdown =~ s/\*(.+?)\*/<i>$1<\/i>/g;
 
-    $markdown =~ s/\*\*\*(.+?)\*\*\*/<b><i>$1<\/i><\/b>/gm;
+    $markdown =~ s/\*\*\*(.+?)\*\*\*/<b><i>$1<\/i><\/b>/g;
 
+    $markdown =~ s/~~(.+?)~~/<del>$1<\/del>/g;
+
+    $markdown =~ s/```(.+?)```/<pre style="background-color: rgb(230, 230, 230)"><code>$1<\/code><\/pre>/gs;
+
+    $markdown =~ s/\[(.+?)\]\((.+?)\)/<a href="$2">$1<\/a>/g;
     return $markdown;
 }
